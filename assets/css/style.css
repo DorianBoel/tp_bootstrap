@@ -1,0 +1,292 @@
+:root {
+    --blue-reef: #3755be;
+    --capri-blue: #1b1f3b
+}
+
+@media (max-width: 991px) {
+    header nav.navbar div.container-fluid {
+        gap: 0;
+    } 
+
+    header nav.navbar div.container-fluid div ul.navbar-nav {
+        flex-direction: row;
+    }
+
+    section#galerie > article {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section#galerie > article img {
+        width: 100%;
+    }    
+}
+
+@media (max-width: 767px) {
+    footer > nav {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 0 5rem;
+    }
+
+    footer > nav div > form {
+        flex-wrap: wrap;
+    }
+
+    footer > nav div > form input {
+        min-width: 90px;
+    }
+}
+
+.row {
+    margin: auto;
+}
+
+nav.bg-light {
+    --bs-bg-opacity: 0;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -95px;
+    visibility: hidden;
+}
+
+/* HEADER */
+header {
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid white;
+    z-index: 101;
+}
+
+header.header.active {
+    background-color: var(--blue-reef);
+}
+
+header nav.navbar {
+    width: 78vw;
+    margin: auto;
+}
+
+header nav div.container-fluid {
+    gap: 14vw;
+}
+
+header nav.navbar-light div button.navbar-toggler {
+    border-color: white;
+}
+
+header nav.navbar-light div button.navbar-toggler span.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.95%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+header nav div div#navbarSupportedContent {
+    gap: 5vw;
+}
+
+header nav div div#navbarSupportedContent ul {
+    gap: 2vw;
+}
+
+.navbar-light .navbar-nav .nav-link, header input.form-control, header input.form-control:focus, header input.form-control::placeholder, footer input.form-control, footer input.form-control:focus, footer input.form-control::placeholder {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header nav.navbar-light div div ul.navbar-nav li a.nav-link, footer div nav a {
+    color: rgba(255, 255, 255, 0.863);
+    transition: color .075s;
+}
+
+header nav.navbar-light div div ul.navbar-nav li a.nav-link:hover, header nav.navbar-light div div ul.navbar-nav li a.nav-link:focus, footer div nav a:hover {
+    color: white;
+}
+
+header nav div a h1 img {
+    width: 3rem;
+}
+
+header input.form-control, footer input.form-control {
+    background-color: transparent;
+    outline: none;
+}
+
+header input.form-control:focus, footer input.form-control:focus {
+    background-color: var(--blue-reef);
+    border-color: white;
+    box-shadow: none;
+}
+
+header input.form-control:focus::placeholder, footer input.form-control:focus::placeholder {
+    opacity: 0;
+}
+
+header nav div div form button.btn, section#accueil div div button.btn-light, footer form button.btn-light {
+    color: var(--blue-reef);
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color .055s ease-in-out, background-color .055s ease-in-out
+}
+
+header nav div div form button.btn:hover, section#accueil div div button.btn-light:hover, footer form button.btn-light:hover {
+    color: white;
+    background-color: transparent;
+}
+
+/* MAIN */
+h2 {
+    font-size: 48px;
+}
+
+section#accueil div div button.btn-secondary {
+    background-color: var(--capri-blue);
+    border-color: var(--capri-blue);
+    transition: color .055s ease-in-out, background-color .055s ease-in-out
+}
+
+section#accueil div div button.btn-secondary:hover {
+    color: var(--capri-blue);
+    border-color: var(--capri-blue);
+    background-color: transparent;
+}
+
+/* SECTION ACCUEIL */
+section#accueil {
+    height: 90vh;
+    padding-top: 1rem;
+    background: url(../img/graphisme-bg-header.svg) top center / cover no-repeat;
+}
+
+section#accueil div {
+    text-align: center;
+    color: white;
+    margin-top: 0;
+}
+
+section#accueil h2 {
+    line-height: 62px;
+    font-weight: 600;
+}
+
+/*SECTION SERVICES*/
+.card {
+    border: none;
+}
+
+section#services h2, section#galerie > h2, section#contact h2 {
+    text-align: center;
+}
+
+/*SECTION GALERIE*/
+div.carousel {
+    max-width: 80vw;
+    margin: auto;
+}
+
+span.carousel-control-prev-icon, span.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: black;
+    background-size: 75% 75%;
+}
+
+span.carousel-control-prev-icon {
+    background-position: 40%;
+}
+
+span.carousel-control-next-icon { 
+    background-position: 60%;
+}
+
+div.carousel-indicators button[data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+section#galerie > article {
+    margin-top: 4rem;
+}
+
+section#galerie > article img {
+    max-height: 40vh;
+}
+
+section#galerie > article div a, section#contact > p a {
+    text-decoration: none;
+}
+
+/*SECTION CONTACT*/
+section#contact {
+    margin-top: 4.5rem;
+}
+
+section#contact button.accordion-button:not(.collapsed) {
+    color: white;
+    background-color: var(--capri-blue);
+}
+
+section#contact button.accordion-button:not(.collapsed):after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/*SECTION MAILFORM*/
+section#mailform {
+    background: var(--capri-blue);
+}
+
+section#mailform .form-control, section#mailform .form-control:focus {
+    color: white;
+    background-color: #f3f5fb8a;
+    border: #f3f5fb8a;
+    box-shadow: none;
+}
+
+section#mailform .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+section#mailform form {
+    width: 70vw;
+}
+
+section#mailform form div textarea#formControlTextarea1 {
+    height: 20vh;
+    resize: none;
+}
+
+section#mailform form + img {
+    width: 100%;
+    margin-top: calc(10vh - 10%);
+}
+
+section#mailform button {
+    width: 7.5rem;
+    background-color: var(--blue-reef);
+    border: none;
+    position: sticky;
+    z-index: 100;
+}
+
+/*FOOTER*/
+footer {
+    background-color: var(--blue-reef);
+    color: white;
+}
+
+footer h6 {
+    font-weight: 600;
+}
+
+footer p:last-child {
+    font-size: .75rem;
+}
+
+footer h6 + p, footer ul li, footer p:last-child {
+    font-weight: 300;
+}
